@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir"
+                          xmlns:ahdis="http://ahdis.ch"
+                         
+                          xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <meta>
+      <source value="http://art-decor.org/decor/services/RetrieveTemplate?format=xml&amp;prefix=&amp;id=2.16.756.5.30.1.1.10.2.39&amp;effectiveDate=dynamic"/>
+   </meta>
+   <id value="ChpccHeaderLanguageCommunication"/>
+   <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+      <valueUri value="urn:hl7-org:v3"/>
+   </extension>
+   <url value="http://fhir.ch/ig/cda-ch-pcc/StructureDefinition/ChpccHeaderLanguageCommunication"/>
+   <name value="LanguageCommunication"/>
+   <title value="Language Communication"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="HL7 Switzerland"/>
+   <kind value="logical"/>
+   <abstract value="false"/>
+   <type value="LanguageCommunication"/>
+   <baseDefinition value="http://hl7.org/fhir/cda/StructureDefinition/LanguageCommunication"/>
+   <derivation value="constraint"/>
+   <differential>
+      <element id="LanguageCommunication">
+         <path value="LanguageCommunication"/>
+         <min value="0"/>
+         <max value="*"/>
+      </element>
+      <element id="LanguageCommunication.templateId">
+         <path value="LanguageCommunication.templateId"/>
+         <slicing>
+            <discriminator>
+               <type value="value"/>
+               <path value="root"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
+      </element>
+      <element id="LanguageCommunication.templateId:2167565301110239">
+         <path value="LanguageCommunication.templateId"/>
+         <sliceName value="2167565301110239"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="LanguageCommunication.templateId:2167565301110239.root">
+         <path value="LanguageCommunication.templateId.root"/>
+         <min value="1"/>
+         <max value="1"/>
+         <fixedString value="2.16.756.5.30.1.1.10.2.39"/>
+      </element>
+      <element id="LanguageCommunication.templateId:13614119376153121">
+         <path value="LanguageCommunication.templateId"/>
+         <sliceName value="13614119376153121"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="LanguageCommunication.templateId:13614119376153121.root">
+         <path value="LanguageCommunication.templateId.root"/>
+         <min value="1"/>
+         <max value="1"/>
+         <fixedString value="1.3.6.1.4.1.19376.1.5.3.1.2.1"/>
+      </element>
+      <element id="LanguageCommunication.languageCode">
+         <path value="LanguageCommunication.languageCode"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="LanguageCommunication.languageCode.code">
+         <path value="LanguageCommunication.languageCode.code"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="LanguageCommunication.modeCode">
+         <path value="LanguageCommunication.modeCode"/>
+         <min value="0"/>
+         <max value="1"/>
+         <!-- .. Warning: No corresponding FHIR ValueSet found for  2.16.840.1.113883.1.11.12249-->
+      </element>
+      <element id="LanguageCommunication.proficiencyLevelCode">
+         <path value="LanguageCommunication.proficiencyLevelCode"/>
+         <min value="0"/>
+         <max value="1"/>
+         <!-- .. Warning: No corresponding FHIR ValueSet found for  2.16.840.1.113883.1.11.12199-->
+      </element>
+      <element id="LanguageCommunication.preferenceInd">
+         <path value="LanguageCommunication.preferenceInd"/>
+         <min value="0"/>
+         <max value="1"/>
+      </element>
+   </differential>
+</StructureDefinition>

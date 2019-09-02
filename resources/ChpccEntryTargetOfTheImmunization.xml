@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir"
+                          xmlns:ahdis="http://ahdis.ch"
+                         
+                          xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <meta>
+      <source value="http://art-decor.org/decor/services/RetrieveTemplate?format=xml&amp;prefix=&amp;id=2.16.756.5.30.1.1.10.4.95&amp;effectiveDate=dynamic"/>
+   </meta>
+   <id value="ChpccEntryTargetOfTheImmunization"/>
+   <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+      <valueUri value="urn:hl7-org:v3"/>
+   </extension>
+   <url value="http://fhir.ch/ig/cda-ch-pcc/StructureDefinition/ChpccEntryTargetOfTheImmunization"/>
+   <name value="Observation"/>
+   <title value="Target Of The Immunization - Medication Target"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="HL7 Switzerland"/>
+   <kind value="logical"/>
+   <abstract value="false"/>
+   <type value="Observation"/>
+   <baseDefinition value="http://hl7.org/fhir/cda/StructureDefinition/Observation"/>
+   <derivation value="constraint"/>
+   <differential>
+      <element id="Observation">
+         <path value="Observation"/>
+      </element>
+      <element id="Observation.classCode">
+         <path value="Observation.classCode"/>
+         <min value="1"/>
+         <max value="1"/>
+         <fixedString value="OBS"/>
+      </element>
+      <element id="Observation.moodCode">
+         <path value="Observation.moodCode"/>
+         <min value="1"/>
+         <max value="1"/>
+         <fixedString value="EVN"/>
+      </element>
+      <element id="Observation.templateId">
+         <path value="Observation.templateId"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Observation.templateId.root">
+         <path value="Observation.templateId.root"/>
+         <min value="1"/>
+         <max value="1"/>
+         <fixedString value="2.16.756.5.30.1.1.10.4.95"/>
+      </element>
+      <element id="Observation.id">
+         <path value="Observation.id"/>
+         <min value="0"/>
+         <max value="1"/>
+      </element>
+      <element id="Observation.id.root">
+         <path value="Observation.id.root"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Observation.id.extension">
+         <path value="Observation.id.extension"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <!--.. WARNING: slice setup cannot be defined for  hl7:code in  ch-pcc-  child elements ignored-->
+      <element id="Observation.text">
+         <path value="Observation.text"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Observation.text.reference">
+         <path value="Observation.text.reference"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Observation.text.reference.value">
+         <path value="Observation.text.reference.value"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Observation.statusCode">
+         <path value="Observation.statusCode"/>
+         <min value="1"/>
+         <max value="1"/>
+         <!-- .. Warning: No corresponding FHIR ValueSet found for  2.16.840.1.113883.1.11.20025-->
+      </element>
+   </differential>
+</StructureDefinition>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir"
+                          xmlns:ahdis="http://ahdis.ch"
+                         
+                          xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <meta>
+      <source value="http://art-decor.org/decor/services/RetrieveTemplate?format=xml&amp;prefix=&amp;id=2.16.756.5.30.1.1.10.4.71&amp;effectiveDate=dynamic"/>
+   </meta>
+   <id value="ChpccEntrySimpleObservation"/>
+   <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+      <valueUri value="urn:hl7-org:v3"/>
+   </extension>
+   <url value="http://fhir.ch/ig/cda-ch-pcc/StructureDefinition/ChpccEntrySimpleObservation"/>
+   <name value="Observation"/>
+   <title value="Simple Observation"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="HL7 Switzerland"/>
+   <kind value="logical"/>
+   <abstract value="false"/>
+   <type value="Observation"/>
+   <baseDefinition value="http://hl7.org/fhir/cda/StructureDefinition/Observation"/>
+   <derivation value="constraint"/>
+   <differential>
+      <element id="Observation">
+         <path value="Observation"/>
+      </element>
+      <element id="Observation.classCode">
+         <path value="Observation.classCode"/>
+         <min value="1"/>
+         <max value="1"/>
+         <fixedString value="OBS"/>
+      </element>
+      <element id="Observation.moodCode">
+         <path value="Observation.moodCode"/>
+         <min value="1"/>
+         <max value="1"/>
+         <fixedString value="EVN"/>
+      </element>
+      <element id="Observation.templateId">
+         <path value="Observation.templateId"/>
+         <slicing>
+            <discriminator>
+               <type value="value"/>
+               <path value="root"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
+      </element>
+      <element id="Observation.templateId:2167565301110471">
+         <path value="Observation.templateId"/>
+         <sliceName value="2167565301110471"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Observation.templateId:2167565301110471.root">
+         <path value="Observation.templateId.root"/>
+         <min value="1"/>
+         <max value="1"/>
+         <fixedString value="2.16.756.5.30.1.1.10.4.71"/>
+      </element>
+      <element id="Observation.templateId:136141193761531413">
+         <path value="Observation.templateId"/>
+         <sliceName value="136141193761531413"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Observation.templateId:136141193761531413.root">
+         <path value="Observation.templateId.root"/>
+         <min value="1"/>
+         <max value="1"/>
+         <fixedString value="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+      </element>
+      <element id="Observation.id">
+         <path value="Observation.id"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Observation.id.root">
+         <path value="Observation.id.root"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Observation.id.extension">
+         <path value="Observation.id.extension"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <!--.. WARNING: slice setup cannot be defined for  hl7:code in  ch-pcc-  child elements ignored-->
+      <element id="Observation.text">
+         <path value="Observation.text"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Observation.text.reference">
+         <path value="Observation.text.reference"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Observation.text.reference.value">
+         <path value="Observation.text.reference.value"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Observation.statusCode">
+         <path value="Observation.statusCode"/>
+         <min value="1"/>
+         <max value="1"/>
+         <!-- .. Warning: No corresponding FHIR ValueSet found for  2.16.840.1.113883.1.11.20025-->
+      </element>
+      <!--.. WARNING: slice setup cannot be defined for  hl7:effectiveTime in  ch-pcc-  child elements ignored-->
+      <element id="Observation.value">
+         <path value="Observation.value"/>
+         <min value="1"/>
+         <max value="*"/>
+         <type>
+            <code value="http://hl7.org/fhir/cda/StructureDefinition/ANY"/>
+            <profile value="http://hl7.org/fhir/cda/StructureDefinition/ANY"/>
+         </type>
+      </element>
+      <element id="Observation.interpretationCode">
+         <path value="Observation.interpretationCode"/>
+         <min value="0"/>
+         <max value="1"/>
+      </element>
+      <element id="Observation.interpretationCode.code">
+         <path value="Observation.interpretationCode.code"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Observation.interpretationCode.codeSystem">
+         <path value="Observation.interpretationCode.codeSystem"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Observation.interpretationCode.codeSystemName">
+         <path value="Observation.interpretationCode.codeSystemName"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Observation.interpretationCode.displayName">
+         <path value="Observation.interpretationCode.displayName"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Observation.methodCode">
+         <path value="Observation.methodCode"/>
+         <min value="0"/>
+         <max value="1"/>
+      </element>
+      <element id="Observation.methodCode.code">
+         <path value="Observation.methodCode.code"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Observation.methodCode.codeSystem">
+         <path value="Observation.methodCode.codeSystem"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Observation.methodCode.codeSystemName">
+         <path value="Observation.methodCode.codeSystemName"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Observation.methodCode.displayName">
+         <path value="Observation.methodCode.displayName"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Observation.targetSiteCode">
+         <path value="Observation.targetSiteCode"/>
+         <min value="0"/>
+         <max value="1"/>
+      </element>
+      <element id="Observation.targetSiteCode.code">
+         <path value="Observation.targetSiteCode.code"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Observation.targetSiteCode.codeSystem">
+         <path value="Observation.targetSiteCode.codeSystem"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Observation.targetSiteCode.codeSystemName">
+         <path value="Observation.targetSiteCode.codeSystemName"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Observation.targetSiteCode.displayName">
+         <path value="Observation.targetSiteCode.displayName"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <!--.. WARNING: slice setup cannot be defined for  hl7:author in  ch-pcc-  child elements ignored-->
+   </differential>
+</StructureDefinition>

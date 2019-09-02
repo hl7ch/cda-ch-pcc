@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir"
+                          xmlns:ahdis="http://ahdis.ch"
+                         
+                          xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <meta>
+      <source value="http://art-decor.org/decor/services/RetrieveTemplate?format=xml&amp;prefix=&amp;id=2.16.756.5.30.1.1.10.3.32&amp;effectiveDate=dynamic"/>
+   </meta>
+   <id value="ChpccSectionDietAndNutritionPlainText"/>
+   <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+      <valueUri value="urn:hl7-org:v3"/>
+   </extension>
+   <url value="http://fhir.ch/ig/cda-ch-pcc/StructureDefinition/ChpccSectionDietAndNutritionPlainText"/>
+   <name value="Section"/>
+   <title value="Diet and Nutrition Section - plain text"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="HL7 Switzerland"/>
+   <kind value="logical"/>
+   <abstract value="false"/>
+   <type value="Section"/>
+   <baseDefinition value="http://hl7.org/fhir/cda/StructureDefinition/Section"/>
+   <derivation value="constraint"/>
+   <differential>
+      <element id="Section">
+         <path value="Section"/>
+      </element>
+      <element id="Section.templateId">
+         <path value="Section.templateId"/>
+         <slicing>
+            <discriminator>
+               <type value="value"/>
+               <path value="root"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
+      </element>
+      <element id="Section.templateId:2167565301110332">
+         <path value="Section.templateId"/>
+         <sliceName value="2167565301110332"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Section.templateId:2167565301110332.root">
+         <path value="Section.templateId.root"/>
+         <min value="1"/>
+         <max value="1"/>
+         <fixedString value="2.16.756.5.30.1.1.10.3.32"/>
+      </element>
+      <element id="Section.templateId:13614119376153112022">
+         <path value="Section.templateId"/>
+         <sliceName value="13614119376153112022"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Section.templateId:13614119376153112022.root">
+         <path value="Section.templateId.root"/>
+         <min value="1"/>
+         <max value="1"/>
+         <fixedString value="1.3.6.1.4.1.19376.1.5.3.1.1.20.2.2"/>
+      </element>
+      <element id="Section.id">
+         <path value="Section.id"/>
+         <min value="0"/>
+         <max value="1"/>
+      </element>
+      <element id="Section.id.root">
+         <path value="Section.id.root"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Section.id.extension">
+         <path value="Section.id.extension"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <!--.. WARNING: slice setup cannot be defined for  hl7:code in  ch-pcc-  child elements ignored-->
+      <element id="Section.title">
+         <path value="Section.title"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Section.text">
+         <path value="Section.text"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+   </differential>
+</StructureDefinition>

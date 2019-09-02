@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir"
+                          xmlns:ahdis="http://ahdis.ch"
+                         
+                          xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <meta>
+      <source value="http://art-decor.org/decor/services/RetrieveTemplate?format=xml&amp;prefix=&amp;id=2.16.756.5.30.1.1.10.4.100&amp;effectiveDate=dynamic"/>
+   </meta>
+   <id value="ChpccEntryProblemStatusObservation"/>
+   <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+      <valueUri value="urn:hl7-org:v3"/>
+   </extension>
+   <url value="http://fhir.ch/ig/cda-ch-pcc/StructureDefinition/ChpccEntryProblemStatusObservation"/>
+   <name value="Observation"/>
+   <title value="Problem Status Observation"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="HL7 Switzerland"/>
+   <kind value="logical"/>
+   <abstract value="false"/>
+   <type value="Observation"/>
+   <baseDefinition value="http://hl7.org/fhir/cda/StructureDefinition/Observation"/>
+   <derivation value="constraint"/>
+   <differential>
+      <element id="Observation">
+         <path value="Observation"/>
+      </element>
+      <element id="Observation.templateId">
+         <path value="Observation.templateId"/>
+         <slicing>
+            <discriminator>
+               <type value="value"/>
+               <path value="root"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
+      </element>
+      <element id="Observation.templateId:21675653011104100">
+         <path value="Observation.templateId"/>
+         <sliceName value="21675653011104100"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Observation.templateId:21675653011104100.root">
+         <path value="Observation.templateId.root"/>
+         <min value="1"/>
+         <max value="1"/>
+         <fixedString value="2.16.756.5.30.1.1.10.4.100"/>
+      </element>
+      <element id="Observation.templateId:136141193761531411">
+         <path value="Observation.templateId"/>
+         <sliceName value="136141193761531411"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Observation.templateId:136141193761531411.root">
+         <path value="Observation.templateId.root"/>
+         <min value="1"/>
+         <max value="1"/>
+         <fixedString value="1.3.6.1.4.1.19376.1.5.3.1.4.1.1"/>
+      </element>
+      <element id="Observation.templateId:21684011138831020157">
+         <path value="Observation.templateId"/>
+         <sliceName value="21684011138831020157"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Observation.templateId:21684011138831020157.root">
+         <path value="Observation.templateId.root"/>
+         <min value="1"/>
+         <max value="1"/>
+         <fixedString value="2.16.840.1.113883.10.20.1.57"/>
+      </element>
+      <element id="Observation.templateId:21684011138831020150">
+         <path value="Observation.templateId"/>
+         <sliceName value="21684011138831020150"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Observation.templateId:21684011138831020150.root">
+         <path value="Observation.templateId.root"/>
+         <min value="1"/>
+         <max value="1"/>
+         <fixedString value="2.16.840.1.113883.10.20.1.50"/>
+      </element>
+      <!--.. WARNING: slice setup cannot be defined for  hl7:code in  ch-pcc-  child elements ignored-->
+      <element id="Observation.text">
+         <path value="Observation.text"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Observation.text.reference">
+         <path value="Observation.text.reference"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Observation.text.reference.value">
+         <path value="Observation.text.reference.value"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Observation.statusCode">
+         <path value="Observation.statusCode"/>
+         <min value="1"/>
+         <max value="1"/>
+         <!-- .. Warning: No corresponding FHIR ValueSet found for  2.16.840.1.113883.1.11.20025-->
+      </element>
+      <element id="Observation.value">
+         <path value="Observation.value"/>
+         <min value="1"/>
+         <max value="1"/>
+         <type>
+            <code value="http://hl7.org/fhir/cda/StructureDefinition/CE"/>
+            <profile value="http://hl7.org/fhir/cda/StructureDefinition/CE"/>
+         </type>
+         <!-- .. Warning: No corresponding FHIR ValueSet found for  1.3.6.1.4.1.19376.1.5.3.1.11.2-->
+      </element>
+      <element id="Observation.value.code">
+         <path value="Observation.value.code"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Observation.value.codeSystem">
+         <path value="Observation.value.codeSystem"/>
+         <min value="1"/>
+         <max value="1"/>
+         <fixedString value="2.16.840.1.113883.6.96"/>
+      </element>
+      <element id="Observation.value.codeSystemName">
+         <path value="Observation.value.codeSystemName"/>
+         <min value="1"/>
+         <max value="1"/>
+         <fixedString value="SNOMED CT"/>
+      </element>
+      <element id="Observation.value.displayName">
+         <path value="Observation.value.displayName"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <!--.. WARNING: slice setup cannot be defined for  hl7:author in  ch-pcc-  child elements ignored-->
+   </differential>
+</StructureDefinition>

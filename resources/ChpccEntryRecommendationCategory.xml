@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir"
+                          xmlns:ahdis="http://ahdis.ch"
+                         
+                          xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <meta>
+      <source value="http://art-decor.org/decor/services/RetrieveTemplate?format=xml&amp;prefix=&amp;id=2.16.756.5.30.1.1.10.4.96&amp;effectiveDate=dynamic"/>
+   </meta>
+   <id value="ChpccEntryRecommendationCategory"/>
+   <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+      <valueUri value="urn:hl7-org:v3"/>
+   </extension>
+   <url value="http://fhir.ch/ig/cda-ch-pcc/StructureDefinition/ChpccEntryRecommendationCategory"/>
+   <name value="Criterion"/>
+   <title value="Recommendation Category - Criterion"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="HL7 Switzerland"/>
+   <kind value="logical"/>
+   <abstract value="false"/>
+   <type value="Criterion"/>
+   <baseDefinition value="http://hl7.org/fhir/cda/StructureDefinition/Criterion"/>
+   <derivation value="constraint"/>
+   <differential>
+      <element id="Criterion">
+         <path value="Criterion"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Criterion.templateId">
+         <path value="Criterion.templateId"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Criterion.templateId.root">
+         <path value="Criterion.templateId.root"/>
+         <min value="1"/>
+         <max value="1"/>
+         <fixedString value="2.16.756.5.30.1.1.10.4.96"/>
+      </element>
+      <!--.. WARNING: slice setup cannot be defined for  hl7:code in  ch-pcc-  child elements ignored-->
+      <element id="Criterion.text">
+         <path value="Criterion.text"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Criterion.text.reference">
+         <path value="Criterion.text.reference"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Criterion.text.reference.value">
+         <path value="Criterion.text.reference.value"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+   </differential>
+</StructureDefinition>
